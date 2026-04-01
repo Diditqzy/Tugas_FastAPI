@@ -9,10 +9,9 @@ class Motor(Base):
     kapasitas_cc = Column(Integer)         
     siap_dijual = Column(Boolean, default=True)
 
-# --- TAMBAHAN BARU: Tabel User ---
 class User(Base):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     hashed_password = Column(String)
-    role = Column(String, default="user") # Role: "admin" atau "user"
+    role = Column(String, default="user")
